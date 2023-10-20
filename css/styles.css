@@ -23,12 +23,26 @@ img {
     margin: 0; 
     padding: 0;
 }
-.container{
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+.container {
+    max-width: 320px; 
+    padding-left: 16px;
+    padding-right: 16px;
     margin: 0 auto;
-  }
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 
 /*============ Header ============*/
 .header{
@@ -167,46 +181,33 @@ img {
 
 
 /* ============ 2 section ============ */
-.visually-hidden{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+
+.second-list-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px;
 }
-/* .section-2-structure{
-} */
+.second-section{
+    padding: 96px 0; 
+}
+.section-second-structure{
+}
 .title-second-section {
     color:#2E2F42;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 36px;
+    font-weight: 700;
     line-height: 1.20;
     letter-spacing: 0.02em;  
     margin-bottom: 8px; 
+    text-align: center;   
 }
 .text-second-section {
     color:#434455;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em; 
 }
-.second-section{
-    padding: 120px 0; 
-}
-.second-list-info{
-    display: flex; 
-    gap: 24px; 
-}
-.section-second-structure{
-    width: calc((100% - 72px) / 4); 
-}
-
 .box-for-icon{
     border-radius: 4px;
     border: 1px solid var(--LIGHT-SLATE, #8E8F99);
@@ -218,11 +219,10 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
-
 .icon{
 }
-
 
 
 /* =========== 3 section ============= */
@@ -258,11 +258,11 @@ img {
     text-align: center;
     margin-bottom: 8px;
 }
-.third-list{
+/* .third-list{
     background-color: #F4F4FD;
     display: flex; 
     gap: 24px; 
-}
+} */
 .third-list-item{
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px; 
@@ -274,8 +274,6 @@ img {
 .job_title{
     padding: 32px 0;  
 }
-
-
 .social-links {
     display: flex;
     gap: 24px;
@@ -283,7 +281,6 @@ img {
     align-self: flex-end;
     justify-content: center;
 }
-
 .link-third {
   display: flex;
   justify-content: center;
@@ -294,25 +291,53 @@ img {
   background-color: #4D5AE5;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .link-third:hover {
     background-color: #404bbf;
 }
-
 .link-third:focus {
     background-color: #404bbf;
 }
 .icon {
   fill: #f4f4fd ;
 }
-
-
-
 .social-item{
     display: flex;
     background-color: #4d5ae5;
     border-radius: 50%;
 }
+
+
+
+.section-third{
+    background-color: #F4F4FD;
+    padding: 96px 0;
+}
+.section-third-superior-heading{
+    color: #2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;  
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 72px;
+}
+.title-third-section {
+    color:#2E2F42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.20;
+    letter-spacing: 0.02em; 
+    text-align: center;
+    margin-bottom: 8px;
+}
+.third-list{
+    background-color: #F4F4FD;
+    /* display: flex;  */
+
+}
+
+
 
 /* =========== 4 section ============= */
 .portfolio {
@@ -789,4 +814,60 @@ img {
 }
 .check-link{
     color:#4d5ae5;
+}
+
+
+
+
+@media screen and (min-width: 768px){
+    /* sec 2 */
+    .container {
+        max-width: 768px;
+    }
+    .section-second-structure{
+        width: calc((100% - 24px) / 2); 
+    }
+    .second-list-info{
+        gap: 72px 24px;
+        padding: 0;
+    }
+    .title-second-section{
+        text-align:left;
+    }
+    /* sec 3 */
+    .third-list{
+    background-color: #F4F4FD;
+    /* display: flex;  */
+    gap: 24px;
+    }   
+}
+@media screen and (min-width: 1158px){
+    /* sec 2 */
+    .container {
+        max-width: 1158px;
+        padding: 0 0;
+    }
+    .section-second-structure{
+        width: calc((100% - 72px) / 4)
+    }
+    .box-for-icon{
+        display:flex;
+    }
+    .title-second-section{
+        font-size: 20px;
+    }
+    .text-second-section{
+        font-weight: 400;
+    }
+    .second-list-info{
+        gap: 24px; 
+    }
+    /* sec 3 */
+    .title-third-section {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.4px;
+    }
+
 }
