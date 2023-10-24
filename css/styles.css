@@ -318,8 +318,6 @@ img {
     line-height: 1.17; /* 116.667% */
     letter-spacing: 0.03em;
     text-transform: uppercase;
-  
-    margin: 17.5px 0px;
 }
 .header-logo span {
     color: #2e2f42;
@@ -1107,7 +1105,6 @@ img {
     }
     .adress-lists{
         display: flex;
-        margin-right: 16px;
         flex-direction: column;
         row-gap: 5px;
     }
